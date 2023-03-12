@@ -2,7 +2,11 @@ module github.com/wcf-web/k8s-resource-operator
 
 go 1.19
 
-require sigs.k8s.io/controller-runtime v0.14.5
+require (
+	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+	k8s.io/apimachinery v0.26.1
+	sigs.k8s.io/controller-runtime v0.14.5
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -50,7 +54,6 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/api v0.26.1 // indirect
 	k8s.io/apiextensions-apiserver v0.26.1 // indirect
-	k8s.io/apimachinery v0.26.1 // indirect
 	k8s.io/client-go v0.26.1 // indirect
 	k8s.io/component-base v0.26.1 // indirect
 	k8s.io/klog/v2 v2.80.1 // indirect

@@ -1,0 +1,31 @@
+# permissions for end users to edit servicecontrols.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: servicecontrol-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: third-party-config-source-adaptor
+    app.kubernetes.io/part-of: third-party-config-source-adaptor
+    app.kubernetes.io/managed-by: kustomize
+  name: servicecontrol-editor-role
+rules:
+- apiGroups:
+  - mesh.t7d.io.mesh.cluster
+  resources:
+  - servicecontrols
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - mesh.t7d.io.mesh.cluster
+  resources:
+  - servicecontrols/status
+  verbs:
+  - get

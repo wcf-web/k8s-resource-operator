@@ -1,0 +1,16 @@
+domain: mesh.cluster
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: third-party-config-source-adaptor
+repo: github.com/tenxcloud/third-party-config-source-adaptor
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: mesh.cluster
+  group: mesh.t7d.io
+  kind: ServiceControl
+  path: github.com/tenxcloud/third-party-config-source-adaptor/api/v1alpha1
+  version: v1alpha1
+version: "3"

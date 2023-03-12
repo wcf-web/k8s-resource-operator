@@ -1,0 +1,27 @@
+# permissions for end users to view servicecontrols.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: servicecontrol-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: third-party-config-source-adaptor
+    app.kubernetes.io/part-of: third-party-config-source-adaptor
+    app.kubernetes.io/managed-by: kustomize
+  name: servicecontrol-viewer-role
+rules:
+- apiGroups:
+  - mesh.t7d.io.mesh.cluster
+  resources:
+  - servicecontrols
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - mesh.t7d.io.mesh.cluster
+  resources:
+  - servicecontrols/status
+  verbs:
+  - get
