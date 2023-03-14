@@ -1,8 +1,9 @@
-# permissions for end users to edit servicecontrols.
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: servicecontrol-editor-role
+  creationTimestamp: null
+  name: manager-role
 rules:
 - apiGroups:
   - mesh.t7d.io.github.com
@@ -19,6 +20,14 @@ rules:
 - apiGroups:
   - mesh.t7d.io.github.com
   resources:
+  - servicecontrols/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - mesh.t7d.io.github.com
+  resources:
   - servicecontrols/status
   verbs:
   - get
+  - patch
+  - update

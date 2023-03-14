@@ -1,12 +1,6 @@
-apiVersion: mesh.t7d.io.mesh.cluster/v1alpha1
+apiVersion: mesh.t7d.io.github.com/v1alpha1
 kind: ServiceControl
 metadata:
-  labels:
-    app.kubernetes.io/name: servicecontrol
-    app.kubernetes.io/instance: servicecontrol-sample
-    app.kubernetes.io/part-of: third-party-config-source-adaptor
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: third-party-config-source-adaptor
   name: servicecontrol-sample
 spec:
   # TODO(user): Add fields here
