@@ -29,7 +29,7 @@ type ServiceControlSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of ServiceControl. Edit servicecontrol_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	serviceName string `json:"foo,omitempty"`
 }
 
 // ServiceControlStatus defines the observed state of ServiceControl
